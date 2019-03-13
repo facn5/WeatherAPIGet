@@ -12,18 +12,32 @@
     Welcome to WeatherAPIGet</div>
 
 <div id="Container">
-<input class="input" type="text" name="city" value="Enter city or zip code">
-<button class="button" type="button">Search</button>
+<input id="textField" type="text" placeholder="Enter city or zip code">
+<button id="sBtn" type="button">Search</button>
 </div>
 
-  <div id="CityInfo">
-    <ul>
-      <li>CityName</li>
-      <li>CityTemp</li>
-      <li>CityTime</li>
-      <li>CityHumidity</li>
-      <li>WindSpeed</li>
-    </ul>
+  <div>
+    <br>
+    <br>
+    <label id="output"></label>
+    <br>
+    <br>
+    <label id="nameLabel"></label>
+    <br>
+    <br>
+    <label id="humidityLabel"></label>
+    <br>
+    <br>
+    <label id="windLabel"></label>
+    <br>
+    <br>
+    <label id="timeLabel"></label>
+    <br>
+    <br>
+    <label id="tempOut"></label>
+    <br>
+    <br>
+    <p id="photo"></p>
   </div>
   <div id="Icons">
       <span class="Sunny"></span>
@@ -31,7 +45,6 @@
       <span class="Cloudy"></span>
   </div>
   <div id="Say"></div>
-
 
 </body>
 <script src="models/app.js"></script>

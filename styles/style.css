@@ -21,15 +21,18 @@ text-align: center;
 margin-top: 40px;
 }
 
-.input{
+#textField{
 width: 150px;
 border-radius: 10px;
+}
 
-  }
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 250px;
+}
 
-
-
-.button{
+#sBtn{
 
   box-shadow: 0 10px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   background-color: #0066cc	;
@@ -42,10 +45,6 @@ border-radius: 10px;
 
 
 }
-
-
-
-
 
 #CityInfo {
   display: flex;
