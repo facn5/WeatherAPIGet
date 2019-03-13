@@ -1,58 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <head>
   <title>WeatherAPI</title>
   <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 
-<body id="background">
-  <div id="Welcome">
-    Welcome to WeatherAPIGet</div>
-
-<div id="Container">
-<select id="zoneSelector">
+<body>
+<div id="b-search-container">
+    <div id="search-container">
+<select name="selector" id="zoneSelector">
+   <option>Select Time Zone</option>
     <option value="Asia">Asia</option>
     <option value="Europe">Europe</option>
     <option value="America">America</option>
     <option value="Africa">Africa</option>
 </select>
-<input id="textField" type="text" placeholder="Enter city or zip code">
+<input name="cityName" id="textField" type="text" placeholder="Enter city name">
 <button id="sBtn" type="button">Search</button>
+  </div>
 </div>
-
-  <div id="labelContainer">
-    <br>
-    <br>
-    <label id="output"></label>
-    <br>
-    <br>
-    <label id="nameLabel"></label>
-    <br>
-    <br>
-    <label id="humidityLabel"></label>
-    <br>
-    <br>
-    <label id="windLabel"></label>
-    <br>
-    <br>
-    <label id="timeLabel"></label>
-    <br>
-    <br>
-    <label id="tempOut"></label>
-    <br>
-    <br>
-    <p id="photo"></p>
+  <div class="display">
+        <div class="big-container">
+       <div class="container">
+        <div class="first-column">
+            <p id="nameLabel"></p>
+            <p id="timeLabel"></p>
+        </div>
+        <div class="second-column">
+            <div id="logo"></div>
+        </div>
+        <div class="third-column">
+            <div class="temp">
+             <p id="tempOut"></p>
+             <p id="output"></p>
+            </div>
+            <div class="info">
+             <p id="windLabel"></p>
+             <p id="humidityLabel"></p>
+            </div>
+        </div>
+        <div id="photo"></div>
+    </div>
+   </div> 
   </div>
-  <div id="Icons">
-      <span class="Sunny"></span>
-      <span class="Rainy"></span>
-      <span class="Cloudy"></span>
-  </div>
-  <div id="Say"></div>
-
 </body>
 <script src="models/app.js"></script>
-
 </html>
