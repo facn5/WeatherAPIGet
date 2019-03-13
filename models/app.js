@@ -36,9 +36,9 @@ function getWeatherApi(){
 }
 
 function getTimeApi(){
-    // var txt = document.getElementById('zoneSelector').value;
+    var txt = document.getElementById('zoneSelector').value;
     var text = document.getElementById('textField').value;
-    var url = 'http://api.timezonedb.com/v2.1/get-time-zone?key=CM90AHOMNZMZ&format=json&by=zone&zone=Asia'+ '/' + text;
+    var url = 'http://api.timezonedb.com/v2.1/get-time-zone?key=CM90AHOMNZMZ&format=json&by=zone&zone='+ txt + '/' + text;
     console.log(url);
     fetch(url)
         .then(function(res){

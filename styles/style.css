@@ -29,7 +29,7 @@ border-radius: 10px;
 img {
   width: 300px;
   height: 300px;
-  border-radius: 250px;
+  border-radius: 150px;
 }
 
 #sBtn{
@@ -38,12 +38,16 @@ img {
   background-color: #0066cc	;
   border: none;
   color: white;
-
-
-
   font-size: 20px;
 
+}
 
+#labelContainer {
+    text-align: center;
+}
+
+label {
+    color: white;
 }
 
 #CityInfo {
