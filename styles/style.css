@@ -8,10 +8,11 @@ h1{
   text-shadow: 0 0 10px #87CEFA;
   background-color: #ADD8E6	;
 }
+
 .Welcome{
   text-align: center;
   font-size: 15px;
-  background-color: 		#2F4F4F;
+  background-color:#2F4F4F;
 }
 
 
@@ -33,7 +34,7 @@ h1{
 }
 
 #sBtn{
-  background-color: #6cc;
+  background-color: #7575FF;
   border-radius: 5px;
   border: none;
   color: white;

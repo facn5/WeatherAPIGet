@@ -22,6 +22,7 @@ function getWeatherApi(){
         let humidity = data["main"]["humidity"];
         let windSpeed = data["wind"]["speed"];
         let tempOutput = Math.round(temp - 273.15) + "°C";
+        console.log(tempOutput);
         let nameOutput = data["name"];
         let icon = data["weather"][0]["icon"];
         let logo = `<img id="logo" src='http://openweathermap.org/img/w/${icon}.png'>`
