@@ -1,7 +1,19 @@
 body{
     background:url(http://www.techandall.com/wp-content/uploads/2013/10/techandall_wallpaper_3.jpg);
     background-size: 100% 600%;
+    margin-top: 30px;
 }
+
+h1{
+  text-shadow: 0 0 10px #87CEFA;
+  background-color: #ADD8E6	;
+}
+.Welcome{
+  text-align: center;
+  font-size: 15px;
+  background-color: 		#2F4F4F;
+}
+
 
 #b-search-container{
     display: flex;
@@ -113,23 +125,3 @@ body{
 .display {
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
