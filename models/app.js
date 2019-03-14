@@ -4,17 +4,13 @@ function buttonClick(){
     getWeatherApi();
     getTimeApi();
     getPhotoAPi();
+    toggle();
 }
 
 function getWeatherApi(){
     var text = document.getElementById('textField').value;
     var cityName = text;
-//    var cityZip = text;
-//    if (isNaN(text)){
       var url = 'https://api.openweathermap.org/data/2.5/weather?q='+ cityName +'&appid=998622209b482ba9e65147a32c1f0f98';
-//    }else {
-//        var url = 'https://api.openweathermap.org/data/2.5/weather?zip='+ cityZip +'&appid=998622209b482ba9e65147a32c1f0f98';
-//    }
 
     fetch(url)
         .then(function(res){
@@ -25,12 +21,15 @@ function getWeatherApi(){
         let temp = data["main"]["temp"];
         let humidity = data["main"]["humidity"];
         let windSpeed = data["wind"]["speed"];
-        let tempOutput = Math.round(temp - 273.15) + " C";
+        let tempOutput = Math.round(temp - 273.15) + "°C";
         let nameOutput = data["name"];
+        let icon = data["weather"][0]["icon"];
+        let logo = `<img id="logo" src='http://openweathermap.org/img/w/${icon}.png'>`
+        document.getElementById('logo').innerHTML = logo;
         document.getElementById('output').innerHTML = description;
         document.getElementById('tempOut').innerHTML = tempOutput;
-        document.getElementById('humidityLabel').innerHTML = humidity;
-        document.getElementById('windLabel').innerHTML = windSpeed;
+        document.getElementById('humidityLabel').innerHTML = 'Humidity: ' + humidity + '%';
+        document.getElementById('windLabel').innerHTML = 'Wind: ' + windSpeed + ' Km/h';
         document.getElementById("nameLabel").innerHTML = nameOutput;
     })
 }
@@ -39,11 +38,9 @@ function getTimeApi(){
     var txt = document.getElementById('zoneSelector').value;
     var text = document.getElementById('textField').value;
     var url = 'http://api.timezonedb.com/v2.1/get-time-zone?key=CM90AHOMNZMZ&format=json&by=zone&zone='+ txt + '/' + text;
-    console.log(url);
     fetch(url)
         .then(function(res){
         return res.json();
-//        console.log(res);
     })
         .then(function(data){
         var str = data["formatted"];
@@ -63,10 +60,11 @@ function getPhotoAPi(){
     }).then(function(res){
         return res.json();
     }).then(function(data){
-        let output = `<img src=${data["photos"][0]["src"]["original"]}>`;
-//        console.log("fetch success");
-//        console.log(data["photos"][0]["url"]);
+        let output = `<img id="photo" src=${data["photos"][0]["src"]["original"]}>`;
      document.getElementById("photo").innerHTML = output;
-//        console.log(output);
     })
+}
+
+function toggle(){
+    document.querySelector('.display').classList.toggle('display');
 }
