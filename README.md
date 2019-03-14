@@ -9,4 +9,4 @@ This ERD diagram can give you a quick look at how it's working.
 
 <img src="assets/Mockup.png">
 
-[Link To The Website](https://github.com/facn5/WeatherAPIGet)
+[Link To The Website](https://facn.github.io/WeatherAPIGet)
